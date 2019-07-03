@@ -6,6 +6,7 @@ using TestNinja.Fundamentals;
 
 namespace TestNinja.UnitTests
 {
+    [Ignore("Because I'm not using it in this section")]
     [TestFixture]
     public class CustomerControllerTests
     {
