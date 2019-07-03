@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace TestNinja.UnitTests
 {
+    [Ignore("Because I'm not using it in this section")]
     [TestFixture]
     public class MathTests
     {
@@ -85,5 +86,24 @@ namespace TestNinja.UnitTests
             Assert.That(result, Is.Unique); //With this we make sure that there are no duplicated items in the array
 
         }
+
+        //[Test]
+        //public void GetOddNumbers_LimitIsLessThanZero_ReturnOddNumbersUpToLimit() //Less than and equal to 0 wont work and thats ok
+        //{
+        //    var result = this._math.GetOddNumbers(0);
+
+        //    Assert.That(result, Is.Not.Empty);
+        //    //Assert.That(result.Count(), Is.EqualTo(3));
+
+        //    //Assert.That(result, Does.Contain(1));
+        //    //Assert.That(result, Does.Contain(3));
+        //    //Assert.That(result, Does.Contain(5));
+
+        //    //Assert.That(result, Is.EquivalentTo(new[] { 1, 3, 5 })); //This line of code is equivalent to the last 3
+
+        //    //Assert.That(result, Is.Ordered);
+        //    //Assert.That(result, Is.Unique); //With this we make sure that there are no duplicated items in the array
+
+        //}
     }
 }
