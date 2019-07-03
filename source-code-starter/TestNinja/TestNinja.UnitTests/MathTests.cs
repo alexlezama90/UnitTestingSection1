@@ -3,15 +3,16 @@ using TestNinja.Fundamentals;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace TestNinja.UnitTests
 {
-    [Ignore("Because I'm not using it in this section")]
     [TestFixture]
     public class MathTests
     {
         private Fundamentals.Math _math;
 
+        [Ignore("Because I'm not using it in this section")]
         [SetUp] //SetUp: NUnit will call this method BEFORE each test.
         public void SetUp()
         {
@@ -24,6 +25,7 @@ namespace TestNinja.UnitTests
         //    this._math.Dispose(); //Just for example purposes
         //}
 
+        [Ignore("Because I'm not using it in this section")]
         [Test]
         //[Ignore("Because I wanted to!")]
         public void Add_WhenCalled_ReturnTheSumOfArguments()
@@ -37,6 +39,7 @@ namespace TestNinja.UnitTests
 
         }
 
+        [Ignore("Because I'm not using it in this section")]
         [Test]
         [TestCase(2, 1, 2)]
         [TestCase(1, 2, 2)]
@@ -63,5 +66,24 @@ namespace TestNinja.UnitTests
 
         //    Assert.That(result, Is.EqualTo(1));
         //}
+
+        [Test]
+        public void GetOddNumbers_LimitIsGreaterThanZero_ReturnOddNumbersUpToLimit()
+        {
+            var result = this._math.GetOddNumbers(5);
+
+            //Assert.That(result, Is.Not.Empty);
+            //Assert.That(result.Count(), Is.EqualTo(3));
+
+            //Assert.That(result, Does.Contain(1));
+            //Assert.That(result, Does.Contain(3));
+            //Assert.That(result, Does.Contain(5));
+
+            Assert.That(result, Is.EquivalentTo(new[] { 1, 3, 5 })); //This line of code is equivalent to the last 3
+
+            Assert.That(result, Is.Ordered);
+            Assert.That(result, Is.Unique); //With this we make sure that there are no duplicated items in the array
+
+        }
     }
 }

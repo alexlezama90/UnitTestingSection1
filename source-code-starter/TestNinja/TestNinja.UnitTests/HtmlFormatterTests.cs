@@ -9,7 +9,7 @@ namespace TestNinja.UnitTests
     [TestFixture]
     public class HtmlFormatterTests
     {
-
+        [Ignore("Because I'm not using it in this section")]
         [Test]
         public void FormatAsBold_WhenCalled_ShouldEncloseTheStringWithStrongElement()
         {
