@@ -29,7 +29,8 @@ namespace TestNinja.UnitTests
         {
             var logger = new ErrorLogger();
 
-            //logger.Log(error);
+            logger.Log(error);
+
             Assert.That(() => logger.Log(error), Throws.ArgumentNullException);
         }
 
